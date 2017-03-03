@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>LAB 5</title>
+</head>
+<body>
+<h1>Write a java script function that add 2 arrays with +ve and -ve operators. </h1>
+<h2>NAME : Jenish Jain</h2>
+<h2>ROLL NO : A078</h2>
+<h2>WP LAB-5</h2>
+
+
+
+
+<script type="text/javascript">
+var a=new Array();
+var b=new Array();
+a=[12,24,50,66,75,220,10];
+b=[16,20,13,45,20,44,8];
+console.log(a);
+console.log(b);
+addandsub(a,b,'+');
+addandsub(a,b,'-');
+function addandsub(a,b,operator)
+{
+	if (operator=='+') 
+	{
+		console.log("operator"+operator);
+		var x1=find_largest(a);
+		var x2=find_largest(b);
+		console.log("Largest number of 1st array is "+x1);
+		console.log("Largest number of 2nd array is "+x2);
+		console.log("Addition of 2 values is "+(x1+x2));
+	}
+	else if (operator=='-') 
+	{
+		console.log("operator"+operator);
+		var x1=find_lowest(a);
+		var x2=find_lowest(b);
+		console.log("Smallest number of 1st array is "+x1);
+		console.log("Smallest number of 2nd array is "+x2);
+		if(x1>x2)
+			console.log("Difference of 2 values is "+(x1-x2));
+		else
+			console.log("Difference of  2 values is "+(x2-x1));
+	}
+}
+function find_lowest(a)
+{
+	var x=a[0];
+	for (var i = a.length - 1; i >= 0; i--) 
+	{
+		if(a[i]<x)
+		{
+			x=a[i];
+		}
+	}
+	return x;
+}
+function find_largest(a)
+{
+	var x=a[0];
+	for (var i = a.length - 1; i >= 0; i--) 
+	{
+		if(a[i]>x)
+		{
+			x=a[i];
+		}
+	}
+	return x;
+}
+</script>
+</body>
+</html>
